@@ -55,8 +55,8 @@ services:
     depends_on:
       - authserver
     ports:
-    - "80:80"
-    - "443:443"
+    - "8501:80"
+    - "8888:443"
     volumes:
     - ./webserver:/webserver
     environment:
