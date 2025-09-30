@@ -28,6 +28,7 @@ services:
     - "8082:1972"
     volumes:
     - .:/app
+    - /home/ec2-user/medbank:/home/irisowner/irisbuild
 
   authserver:
     init: true
