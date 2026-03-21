@@ -57,7 +57,7 @@ services:
     - authserver
     ports:
     - "8501:80"
-    - "8888:443"
+    - "443:443"
     volumes:
     - ./webserver:/webserver
     environment:
