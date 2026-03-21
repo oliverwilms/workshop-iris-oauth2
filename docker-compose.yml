@@ -54,7 +54,7 @@ services:
     container_name: webserver
     init: true
     depends_on:
-      - authserver
+    - authserver
     ports:
     - "8501:80"
     - "8888:443"
