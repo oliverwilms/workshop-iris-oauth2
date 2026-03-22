@@ -45,23 +45,23 @@ services:
     volumes:
     - .:/app
 
-  webserver:
-    hostname: webserver
-    build:
-      context: webserver
-      dockerfile: Dockerfile
-    image: workshop-iris-oauth:webserver
-    container_name: webserver
-    init: true
-    depends_on:
-    - authserver
-    ports:
-    - "8501:80"
-    - "443:443"
-    volumes:
-    - ./webserver:/webserver
-    environment:
-    - ISC_DATA_DIRECTORY=/webserver
+#  webserver:
+#    hostname: webserver
+#    build:
+#      context: webserver
+#      dockerfile: Dockerfile
+#    image: workshop-iris-oauth:webserver
+#    container_name: webserver
+#    init: true
+#    depends_on:
+#    - authserver
+#    ports:
+#    - "8501:80"
+#    - "443:443"
+#    volumes:
+#    - ./webserver:/webserver
+#    environment:
+#    - ISC_DATA_DIRECTORY=/webserver
 
   angular-client:
     build:
