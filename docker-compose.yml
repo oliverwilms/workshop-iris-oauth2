@@ -41,7 +41,7 @@ services:
     container_name: authserver
     ports:
     - "9093:52773"
-    - "8083:1972"
+    - "8888:1972"
     volumes:
     - .:/app
 
