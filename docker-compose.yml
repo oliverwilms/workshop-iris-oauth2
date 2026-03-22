@@ -15,20 +15,20 @@ services:
 #    volumes:
 #    - .:/app
 
-#  resserver:
-#    init: true
-#    hostname: resserver
-#    build:
-#      context: oauth-resource-server
-#    image: workshop-iris-oauth:resserver
-#    command: --check-caps false
-#    container_name: resourceserver
-#    ports:
-#    - "9092:52773"
-#    - "8082:1972"
-#    volumes:
-#    - .:/app
-#    - /home/ec2-user/medbank:/home/irisowner/irisbuild
+  resserver:
+    init: true
+    hostname: resserver
+    build:
+      context: oauth-resource-server
+    image: workshop-iris-oauth:resserver
+    command: --check-caps false
+    container_name: resourceserver
+    ports:
+    - "9092:52773"
+    - "8501:1972"
+    volumes:
+    - .:/app
+    - /home/ec2-user/medbank:/home/irisowner/irisbuild
 
   authserver:
     init: true
