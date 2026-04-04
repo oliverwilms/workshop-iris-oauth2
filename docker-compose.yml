@@ -30,20 +30,20 @@ services:
     - .:/app
     - /home/ec2-user/medbank:/home/irisowner/irisbuild
 
-  authserver:
-    init: true
-    hostname: authserver
-    build:
-      context: oauth-auth-server
-      dockerfile: Dockerfile
-    image: workshop-iris-oauth:authserver
-    command: --check-caps false
-    container_name: authserver
-    ports:
-    - "9093:52773"
-    - "8888:1972"
-    volumes:
-    - .:/app
+#  authserver:
+#    init: true
+#    hostname: authserver
+#    build:
+#      context: oauth-auth-server
+#      dockerfile: Dockerfile
+#    image: workshop-iris-oauth:authserver
+#    command: --check-caps false
+#    container_name: authserver
+#    ports:
+#    - "9093:52773"
+#    - "8888:1972"
+#    volumes:
+#    - .:/app
 
 #  webserver:
 #    hostname: webserver
